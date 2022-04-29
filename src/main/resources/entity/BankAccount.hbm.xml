@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   <class name="entity.BankAccount" table="bankaccount" catalog="bank" optimistic-lock="version">
+       <id name="accountNumber" type="string">
+           <column name="accountNumber" not-null="false" length="25"/>
+       </id>
+       <property name="amount" type="java.lang.Double">
+           <column name="amount" not-null="false"/>
+       </property>
+   </class>
+</hibernate-mapping>
